@@ -17,7 +17,7 @@ function Tag({
       {...props}
       className={c(
         className,
-        "ml-3 flex items-end space-x-0.5 rounded-full border px-4 py-1 transition duration-200",
+        "ml-3 flex whitespace-nowrap items-end space-x-0.5 rounded-full border px-4 py-1 transition duration-200",
         isActive
           ? "bg-slate-600 text-white"
           : "border-gray-300 bg-white text-gray-600 hover:bg-gray-200"

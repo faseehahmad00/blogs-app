@@ -4,7 +4,7 @@ import LinkTo from "./LinkTo";
 export default function Header({ className }: { className?: string }) {
   return (
     <div className={c(className, "border-b")}>
-      <div className="mx-auto flex max-w-screen-xl items-center px-4 py-6 sm:px-6 ">
+      <div className="mx-auto flex max-w-screen-xl items-center px-4 py-6 sm:px-6">
         <LinkTo href="/" className="flex items-center">
           <img
             src="https://rabbito.io/assets/logos/logo-small.png"

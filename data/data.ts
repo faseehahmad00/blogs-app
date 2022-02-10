@@ -61,7 +61,7 @@ const sections = [
     tag: "mostliked",
   },
   {
-    title: "Latest",
+    title: "Recent Posts",
     tag: "latest",
   },
 ];
@@ -101,8 +101,8 @@ const topics = [
   "Travel",
   "Finance",
   "Business",
-  "Marketing",
   "Sales",
+  "Marketing",
   "UI/UX",
   "Education",
   "News",

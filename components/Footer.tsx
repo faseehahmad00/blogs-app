@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className="mx-auto max-w-screen-xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+    <div className="mx-auto max-w-screen-xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8 mt-32">
       <div className="xl:grid xl:grid-cols-4 xl:gap-8">
         <div className="hidden xl:col-span-1 xl:block">
           <h3 className="font-spartan text-3xl font-black tracking-tight text-gray-600">
