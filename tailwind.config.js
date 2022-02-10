@@ -5,7 +5,14 @@ module.exports = {
     './layouts/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'sans': ['IBM Plex Sans', 'sans-serif'],
+        'serif': ['Merriweather', 'serif'],
+      }
+    },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
 }
