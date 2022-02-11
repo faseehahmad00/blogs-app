@@ -5,7 +5,7 @@ export default function Post({ data }) {
     <div className="flex space-x-6 mb-6">
       <div className="flex shrink-0">
         <img
-          className="aspect-square h-48 object-cover rounded"
+          className="aspect-square h-44 object-cover rounded"
           src={data.img}
           alt=""
         />

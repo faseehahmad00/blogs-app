@@ -7,7 +7,7 @@ const posts = [
       "Our goal with Flutter is to give you the tools you need to build a great experience, regardless of which operating system you’re building for. And so we want to bring the same core framework and tools to every place you might want to paint pixels. Flutter allows you to handcraft beautiful experiences where your brand and design come to the forefront. ",
     likes: 10,
     img: "https://picsum.photos/id/200/300",
-    tags: ["tech", "beauty", "lifestyle", "travel", "trending"],
+    tags: ["Lifestyle", "News", "trending", "latest", "Recommended"],
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const posts = [
       "In resignation letters, this is where you write how much you appreciated the people you worked with. And I’m definitely going to do the same. But this is in spite of the culture of Google, rather than because of. The Ethical AI team created by Meg Mitchell and Timnit Gebru was one of the most inclusive on which I’ve ever worked or had the fortune of witnessing firsthand.",
     likes: 6,
     img: "https://picsum.photos/id/250/300",
-    tags: ["tech", "beauty", "lifestyle", "travel", "latest"],
+    tags: ["Beauty", "Travel", "travel", "latest", "Recommended"],
   },
   {
     id: 3,
@@ -27,7 +27,14 @@ const posts = [
       "If you ask a room full of software engineers what they think about recruiters, there are a number of themes that arise. There are jokes about how overwhelming the experience is, the volume of messages, how eye-rolling-ly bad the targeting is, how impersonal the process is There are chapters in books lamenting the feeling that someone in the tech industry gets from the constant recruiter outreach",
     likes: 10,
     img: "https://picsum.photos/id/100/300",
-    tags: ["tech", "beauty", "lifestyle", "travel", "latest"],
+    tags: [
+      "Technology",
+      "Beauty",
+      "Lifestyle",
+      "Travel",
+      "travel",
+      "latest",
+    ],
   },
   {
     id: 4,
@@ -37,7 +44,15 @@ const posts = [
       "The indulgences were medieval pay-to-play, a way for the naughty to offset their peccadillos with a payment to the church. Covet your neighbor’s wife? Eat too many eel pies on Easter Sunday? Give a bag of silver or gold to your local bishop and you too could still walk through those pearly gates. For Luther it was a step too far — a greedy, cynical ploy by the Church that implied humans could haggle with God. It was widely hated, and when someone finally had the gall — or stupidity — to complain about it, people listened. Including, of course, the authorities.",
     likes: 50,
     img: "https://picsum.photos/id/210/300",
-    tags: ["tech", "beauty", "lifestyle", "travel", "mostliked"],
+    tags: [
+      "Technology",
+      "Beauty",
+      "Lifestyle",
+      "Travel",
+      "mostliked",
+      "latest",
+      "Recommended",
+    ],
   },
   {
     id: 5,
@@ -47,7 +62,15 @@ const posts = [
       "In a world where celebrities like Jimmy Fallon, Timbaland, and Gwyneth Paltrow are buying Bored Apes and making them their profile pictures, it’s easy to jump to the conclusion that these blockchain contracts displayed as digital avatars are just a hyped-up craze that enables rich people to show their clout. With price tags in the hundreds of thousands of dollars, NFTs like Bored Apes and CryptoPunks",
     likes: 10,
     img: "https://picsum.photos/id/180/300",
-    tags: ["tech", "beauty", "lifestyle", "travel", "trending"],
+    tags: [
+      "Technology",
+      "Beauty",
+      "Lifestyle",
+      "Travel",
+      "trending",
+      "latest",
+      "Recommended",
+    ],
   },
 ];
 

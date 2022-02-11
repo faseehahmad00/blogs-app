@@ -4,25 +4,47 @@ import { SearchIcon } from "@heroicons/react/solid";
 
 import { topics } from "../data/data";
 
+interface Props {
+  selectedTag?: string;
+  onTagChange?: (tag: string) => void;
+  isAuthenticated?: boolean;
+}
+
 function Tag({
   isActive,
   className,
   children,
+  x = false,
   type = "button",
   ...props
-}: { isActive: boolean } & HTMLProps<HTMLButtonElement>) {
+}: { isActive: boolean; x?: boolean } & HTMLProps<HTMLButtonElement>) {
+  let classNames = c(
+    className,
+    "flex items-end space-x-0.5 whitespace-nowrap rounded-full border px-4 py-1 transition duration-200"
+  );
+
+  if (x) {
+    if (isActive) {
+      classNames = c(classNames, "bg-sky-600 text-white");
+    } else {
+      classNames = c(
+        classNames,
+        "border-sky-500 bg-white text-sky-600 hover:bg-sky-200"
+      );
+    }
+  } else {
+    if (isActive) {
+      classNames = c(classNames, "bg-slate-600 text-white");
+    } else {
+      classNames = c(
+        classNames,
+        "border-gray-300 bg-white text-gray-600 hover:bg-gray-200"
+      );
+    }
+  }
+
   return (
-    <button
-      type={type as any}
-      {...props}
-      className={c(
-        className,
-        "ml-3 flex whitespace-nowrap items-end space-x-0.5 rounded-full border px-4 py-1 transition duration-200",
-        isActive
-          ? "bg-slate-600 text-white"
-          : "border-gray-300 bg-white text-gray-600 hover:bg-gray-200"
-      )}
-    >
+    <button type={type as any} {...props} className={classNames}>
       {children}
     </button>
   );
@@ -32,7 +54,11 @@ function easeOutQuart(x: number): number {
   return 1 - Math.pow(1 - x, 4);
 }
 
-export default function SearchBar() {
+export default function SearchBar({
+  onTagChange = () => {},
+  selectedTag,
+  isAuthenticated,
+}: Props) {
   const [scroll, setScroll] = useState(0);
   const tagsRef = useRef<HTMLDivElement>(null);
   const opacity = easeOutQuart(Math.max(0, 1 - scroll / 180));
@@ -62,20 +88,40 @@ export default function SearchBar() {
           onScroll={(e) => setScroll((e.target as any)?.scrollLeft)}
         >
           <div className="min-w-content flex">
-            <div className="sticky z-20 left-0 h-full w-8 bg-gradient-to-r from-white" />
+            <div className="sticky left-0 z-20 h-full w-8 bg-gradient-to-r from-white" />
 
-            <div className="relative z-10 ml-96 flex items-center py-7">
-              <Tag className="" isActive={true}>
+            <div className="relative z-10 ml-96 flex items-center space-x-3 py-7">
+              <Tag
+                onClick={() => onTagChange("all")}
+                isActive={selectedTag === "all"}
+              >
                 All
               </Tag>
 
+              {isAuthenticated && (
+                <>
+                  <Tag
+                    isActive={selectedTag === "Recommended"}
+                    onClick={() => onTagChange("Recommended")}
+                    x={true}
+                  >
+                    Recommended
+                  </Tag>
+                  <div className="h-full w-px bg-gray-300" />
+                </>
+              )}
+
               {topics.map(({ name }) => (
-                <Tag key={name} isActive={false}>
+                <Tag
+                  key={name}
+                  onClick={() => onTagChange(name)}
+                  isActive={selectedTag === name}
+                >
                   {name}
                 </Tag>
               ))}
             </div>
-            <div className="sticky z-20 right-0 h-full w-8 bg-gradient-to-l from-white" />
+            <div className="sticky right-0 z-20 h-full w-8 bg-gradient-to-l from-white" />
           </div>
         </div>
       </div>
